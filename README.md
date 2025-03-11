@@ -14,28 +14,36 @@ This is a simple FaceTime-style web app that allows users to create and join vid
 
 ## Installation & Setup
 
+First, clone the repository:
+```sh
+git clone https://github.com/xjohnnygx/FaceTime-app.git
+cd FaceTime-app
+```
+
 ### Option 1: Run with Docker
-Ensure you have Docker and Docker Compose installed, then run:
+Ensure you have **Docker** and **Docker Compose** installed. If you don't, download them here:
+- [Docker Engine & Docker Compose](https://www.docker.com/get-started/)
+
+Then, run:
 ```sh
 docker-compose up --build
 ```
 
 ### Option 2: Run Locally (Python)
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/xjohnnygx/FaceTime-app.git
-   cd FaceTime-app
-   ```
-2. Create a virtual environment and install dependencies:
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-3. Start the FastAPI server:
-   ```sh
-   python main.py
-   ```
+Ensure you have **Python 3.12.2+** installed. If not, download it here:
+- [Python Downloads](https://www.python.org/downloads/)
+
+Then, proceed with the following steps:
+```sh
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Start the FastAPI server:
+```sh
+python main.py
+```
 
 ## Usage
 1. Open `http://localhost:8000/` on the host device to create or join a room.
@@ -45,6 +53,7 @@ docker-compose up --build
    - On Mac/Linux, run `ifconfig` or `ip a` and check the local network adapter.
 4. On the second device, open `http://<HOST_IP>:8000/` in a web browser.
 5. Enter the room ID and join the video call.
+6. If you don't have another device, simply open a new tab in your browser and go to `http://localhost:8000/` again to simulate a second user.
 
 
 ## License

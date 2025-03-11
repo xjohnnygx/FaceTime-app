@@ -23,8 +23,8 @@ docker-compose up --build
 ### Option 2: Run Locally (Python)
 1. Clone the repository:
    ```sh
-   git clone <repo-url>
-   cd <repo-folder>
+   git clone https://github.com/xjohnnygx/FaceTime-app.git
+   cd FaceTime-app
    ```
 2. Create a virtual environment and install dependencies:
    ```sh
@@ -38,28 +38,14 @@ docker-compose up --build
    ```
 
 ## Usage
-1. Open `http://localhost:8000/` to create or join a room.
-2. Share the room link with another person to start a video call.
+1. Open `http://localhost:8000/` on the host device to create or join a room.
+2. Copy the room ID from the interface.
+3. If joining from another device on the **same local network**, find the host device's local IP address:
+   - On Windows, run `ipconfig` and look for the IPv4 address.
+   - On Mac/Linux, run `ifconfig` or `ip a` and check the local network adapter.
+4. On the second device, open `http://<HOST_IP>:8000/` in a web browser.
+5. Enter the room ID and join the video call.
 
-## File Structure
-```
-/
-├── main.py  # FastAPI entry point
-├── routers/  # API route handlers
-├── templates/  # HTML templates
-├── static/
-│   ├── js/  # Compiled JS files
-│   ├── ts/  # TypeScript files
-│   ├── css/  # Stylesheets
-│   ├── jpg/  # Images
-├── requirements.txt  # Python dependencies
-├── Dockerfile  # Docker setup
-├── docker-compose.yml  # Docker Compose config
-├── .gitignore  # Git ignored files
-├── .dockerignore  # Docker ignored files
-├── README.md  # Project documentation
-└── LICENSE  # License information
-```
 
 ## License
 This project is licensed under a **restricted license**. You are allowed to clone and test the app, but modifying, distributing, or using it for commercial purposes is strictly prohibited. See the [LICENSE](LICENSE) file for details.

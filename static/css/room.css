@@ -1,0 +1,18 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+#remoteVideo {
+    height: 85vh;
+    min-height: 400px;
+    object-fit: cover;
+}
+#localVideo {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#copyButton {
+    cursor: pointer;
+}

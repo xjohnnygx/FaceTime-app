@@ -1,0 +1,22 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+.container {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+input {
+    background: #333;
+    border: none;
+    color: #fff;
+}
+input:focus {
+    background: #444;
+    color: #fff;
+}
+.btn {
+    width: 100%;
+}
